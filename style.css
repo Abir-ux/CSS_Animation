@@ -1,0 +1,38 @@
+body{
+    background: #34495e;
+}
+
+.loading-screen{
+    margin-top: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: auto;
+}
+
+.loading-bar{
+    width: 260px;
+    height: 5px;
+    background: white;
+    margin-top: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.loading-bar::before{
+    content: "";
+    width: 68px;
+    height: 5px;
+    position: absolute;
+    background: black;
+    left: -34px;
+    animation: blackBar 3.5s infinite ease;
+
+}
+
+@keyframes blackBar {
+    50%{
+        left: 222px;
+    }
+}
